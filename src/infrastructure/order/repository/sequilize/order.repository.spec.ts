@@ -119,6 +119,9 @@ describe("Order repository test", () => {
 
     expect(order).toEqual(foundOrder);
 
+    expect(foundOrder.customerId).not.toEqual(customer.id);
+    expect(foundOrder.customerId).toEqual(customer2.id);
+
   });
 
   it("should find a order", async () => {
